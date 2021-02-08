@@ -90,7 +90,7 @@ export default {
         return false
       }
       if (guess === this.num) {
-        this.makeToast('Вы угадали! Это заняло' + this.turns + ' хода(ов)', 'success')
+        this.makeToast('Вы угадали! Это заняло ' + this.turns + ' хода(ов)', 'success')
         return true
       } else if (guess > this.num) {
         this.makeToast('Число больше загаданного! Попробуйте снова', 'danger')
