@@ -75,7 +75,7 @@ export default {
       })
     },
     reset() {
-      this.turns = 0
+      this.turns = 1
       this.newNum()
     },
     newNum() {
