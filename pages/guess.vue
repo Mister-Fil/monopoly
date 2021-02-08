@@ -1,33 +1,64 @@
 <template>
-  <div class="justify-content-center vh-200 vw-100 text-center align-self-center">
-    <div>Угадайте число</div>
-    <div><b-button pill variant="outline-secondary" @click="newNum()"> Загадать число </b-button></div>
-    <div>
+  <div class="align-self-center">
+    <h3 class="pb-4">Угадайте число</h3>
+
+    <div class="d-flex justify-content-around pb-4">
       <div>
-        <b-button pill variant="outline-info" @click="checkGuess(1)"> 1 </b-button>
-        <b-button pill variant="outline-info" @click="checkGuess(2)"> 2 </b-button>
-        <b-button pill variant="outline-info" @click="checkGuess(3)"> 3 </b-button>
+        <b-button pill variant="outline-info" @click="checkGuess(1)"> 1</b-button>
       </div>
       <div>
-        <b-button pill variant="outline-info" @click="checkGuess(4)"> 4 </b-button>
-        <b-button pill variant="outline-info" @click="checkGuess(5)"> 5 </b-button>
-        <b-button pill variant="outline-info" @click="checkGuess(6)"> 6 </b-button>
+        <b-button pill variant="outline-info" @click="checkGuess(2)"> 2</b-button>
       </div>
       <div>
-        <b-button pill variant="outline-info" @click="checkGuess(7)"> 7 </b-button>
-        <b-button pill variant="outline-info" @click="checkGuess(8)"> 8 </b-button>
-        <b-button pill variant="outline-info" @click="checkGuess(10)"> 9 </b-button>
+        <b-button pill variant="outline-info" @click="checkGuess(3)"> 3</b-button>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-around pb-4">
+      <div>
+        <b-button pill variant="outline-info" @click="checkGuess(4)"> 4</b-button>
       </div>
       <div>
-        <b-button pill variant="outline-info" @click="checkGuess(10)"> 10 </b-button>
+        <b-button pill variant="outline-info" @click="checkGuess(5)"> 5</b-button>
       </div>
-      <div><b-button pill variant="outline-danger" @click="reset()"> Сброс </b-button></div>
+      <div>
+        <b-button pill variant="outline-info" @click="checkGuess(6)"> 6</b-button>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-around pb-4">
+      <div>
+        <b-button pill variant="outline-info" @click="checkGuess(7)"> 7</b-button>
+      </div>
+      <div>
+        <b-button pill variant="outline-info" @click="checkGuess(8)"> 8</b-button>
+      </div>
+      <div>
+        <b-button pill variant="outline-info" @click="checkGuess(10)"> 9</b-button>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-around pb-4">
+      <div>
+        <b-button pill variant="outline-info" @click="checkGuess(10)"> 10</b-button>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-around pb-4">
+      <div>
+        <b-button pill variant="outline-danger" @click="reset()"> Сброс</b-button>
+      </div>
+      <div>
+        <b-button pill variant="outline-secondary" @click="newNum()"> Загадать число</b-button>
+      </div>
     </div>
   </div>
 </template>
+
 <script>
 export default {
   name: 'guess',
+  layout: 'game',
   data() {
     return {
       num: 0,
@@ -66,4 +97,3 @@ export default {
   },
 }
 </script>
-<style scoped></style>

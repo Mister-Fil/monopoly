@@ -18,9 +18,7 @@
       <div></div>
       <div>Sum {{ diceSumm }}</div>
       <div class="text-center">
-        <b-button pill variant="outline-danger" @click="roll()"
-          >Lets Roll!</b-button
-        >
+        <b-button pill variant="outline-danger" @click="roll()">Lets Roll! </b-button>
       </div>
     </div>
   </div>

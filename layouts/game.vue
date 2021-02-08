@@ -1,7 +1,5 @@
 <template>
   <div class="d-flex justify-content-center vh-100 vw-100">
-    <div class="align-self-center">
-      <Nuxt />
-    </div>
+    <Nuxt />
   </div>
 </template>
