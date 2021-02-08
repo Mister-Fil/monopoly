@@ -77,10 +77,10 @@ export default {
     reset() {
       this.turns = 0
       this.newNum()
-      alert('Число обновлено')
     },
     newNum() {
       this.num = Math.floor(Math.random() * 10) + 1
+      alert('Число обновлено')
     },
     checkGuess(guess) {
       try {
