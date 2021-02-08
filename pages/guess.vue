@@ -1,6 +1,45 @@
 <template>
   <div>
-    <div>Введите число {{ checkGuess }}</div>
+    <div>
+      Угадайте число
+
+      <b-button pill variant="outline-danger" @click="reset()">
+        Сброс
+      </b-button>
+      <b-button pill variant="outline-secondary" @click="newNum()">
+        Загадать число</b-button
+      >
+      <b-button pill variant="outline-info" @click="checkGuess(1)">
+        1
+      </b-button>
+      <b-button pill variant="outline-info" @click="checkGuess(2)">
+        2
+      </b-button>
+      <b-button pill variant="outline-info" @click="checkGuess(3)">
+        3
+      </b-button>
+      <b-button pill variant="outline-info" @click="checkGuess(4)">
+        4
+      </b-button>
+      <b-button pill variant="outline-info" @click="checkGuess(5)">
+        5
+      </b-button>
+      <b-button pill variant="outline-info" @click="checkGuess(6)">
+        6
+      </b-button>
+      <b-button pill variant="outline-info" @click="checkGuess(7)">
+        7
+      </b-button>
+      <b-button pill variant="outline-info" @click="checkGuess(8)">
+        8
+      </b-button>
+      <b-button pill variant="outline-info" @click="checkGuess(10)">
+        9
+      </b-button>
+      <b-button pill variant="outline-info" @click="checkGuess(10)">
+        10
+      </b-button>
+    </div>
   </div>
 </template>
 
@@ -19,11 +58,11 @@ export default {
       this.newNum()
     },
     newNum() {
-      this.num = parseInt(Math.random() * 10) + 1
+      this.num = Math.floor(Math.random() * 10) + 1
     },
     checkGuess(guess) {
       try {
-        guess = parseInt(guess)
+        guess = Math.floor(guess)
       } catch (e) {
         alert('Угадайте число!')
         this.turns++
