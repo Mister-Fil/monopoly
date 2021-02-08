@@ -3,7 +3,7 @@
     <div class="align-self-center">
       <h3
         v-anime="{
-          rotate: -360,
+          rotate: -1080,
           backgroundColor: ['#ea021a', '#ffffff'],
           duration: 4500,
           loop: false,
@@ -12,11 +12,9 @@
       >
         Бросок кубиков
       </h3>
-      <div></div>
       <div>Dice 1: {{ dice1 }}</div>
       <div>Dice 2: {{ dice2 }}</div>
-      <div></div>
-      <div>Sum {{ diceSumm }}</div>
+      <div>Sum: {{ diceSumm }}</div>
       <div class="text-center">
         <b-button pill variant="outline-danger" @click="roll()">Lets Roll! </b-button>
       </div>
@@ -27,6 +25,7 @@
 <script>
 export default {
   name: 'nullpage',
+  layout: 'game',
   data() {
     return {
       dice1: 0,
