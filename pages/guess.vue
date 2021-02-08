@@ -46,10 +46,7 @@
 
     <div class="d-flex justify-content-around pb-4">
       <div>
-        <b-button pill variant="outline-danger" @click="reset()"> Сброс</b-button>
-      </div>
-      <div>
-        <b-button pill variant="outline-secondary" @click="newNum('Число обновлено')"> Загадать число</b-button>
+        <b-button pill variant="outline-secondary" @click="reset()"> Загадать число</b-button>
       </div>
     </div>
   </div>
@@ -77,6 +74,7 @@ export default {
     reset() {
       this.turns = 1
       this.newNum()
+      alert('Число обновлено')
     },
     newNum(message) {
       this.num = Math.floor(Math.random() * 10) + 1
