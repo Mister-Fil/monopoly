@@ -46,7 +46,7 @@
 
     <div class="d-flex justify-content-around pb-4">
       <div>
-        <b-button pill variant="outline-secondary" @click="reset()"> Загадать число</b-button>
+        <b-button pill variant="outline-secondary" @click="reset()">Загадать число</b-button>
       </div>
       <div v-if="isGameOver">
         <b-button pill variant="success" @click="reset()">Новая игра</b-button>
@@ -64,7 +64,7 @@ export default {
       num: 0,
       turns: 0,
       toastCount: 0,
-      guess: null,
+      guess: Math.floor(),
     }
   },
   computed: {
@@ -90,16 +90,16 @@ export default {
     },
     checkGuess(guess) {
       try {
-        guess = Math.floor(guess)
+        this.guess = Math.floor(guess)
       } catch (e) {
         alert('Угадайте число!')
         this.turns++
         return false
       }
-      if (guess === this.num) {
+      if (this.guess === this.num) {
         this.makeToast('Вы угадали! Это заняло ' + this.turns + ' хода(ов)', 'success')
         return true
-      } else if (guess > this.num) {
+      } else if (this.guess > this.num) {
         this.makeToast('Число больше загаданного! Попробуйте снова', 'danger')
         this.turns++
         return false
