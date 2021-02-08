@@ -48,6 +48,9 @@
       <div>
         <b-button pill variant="outline-secondary" @click="reset()"> Загадать число</b-button>
       </div>
+      <div v-if="isGameOver">
+        <b-button pill variant="success" @click="reset()">Новая игра</b-button>
+      </div>
     </div>
   </div>
 </template>
@@ -61,7 +64,13 @@ export default {
       num: 0,
       turns: 0,
       toastCount: 0,
+      guess: null,
     }
+  },
+  computed: {
+    isGameOver() {
+      return this.guess === this.num
+    },
   },
   methods: {
     makeToast(message, variant = 'success') {
@@ -76,7 +85,7 @@ export default {
       this.newNum()
       alert('Число обновлено')
     },
-    newNum(message) {
+    newNum() {
       this.num = Math.floor(Math.random() * 10) + 1
     },
     checkGuess(guess) {
