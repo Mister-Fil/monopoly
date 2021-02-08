@@ -83,7 +83,7 @@ export default {
     reset() {
       this.turns = 1
       this.newNum()
-      alert('Число обновлено')
+      this.makeToast('Число обновлено', 'warning')
     },
     newNum() {
       this.num = Math.floor(Math.random() * 10) + 1
