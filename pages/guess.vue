@@ -49,7 +49,7 @@
         <b-button pill variant="outline-danger" @click="reset()"> Сброс</b-button>
       </div>
       <div>
-        <b-button pill variant="outline-secondary" @click="newNum()"> Загадать число</b-button>
+        <b-button pill variant="outline-secondary" @click="newNum('Число обновлено')"> Загадать число</b-button>
       </div>
     </div>
   </div>
@@ -78,9 +78,8 @@ export default {
       this.turns = 1
       this.newNum()
     },
-    newNum() {
+    newNum(message) {
       this.num = Math.floor(Math.random() * 10) + 1
-      alert('Число обновлено')
     },
     checkGuess(guess) {
       try {
