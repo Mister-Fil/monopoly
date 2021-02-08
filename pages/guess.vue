@@ -1,6 +1,7 @@
 <template>
-  <div>Угадай число</div>
-  <div>Введите число</div>
+  <div>
+    <div>Введите число {{ checkGuess }}</div>
+  </div>
 </template>
 
 <script>
