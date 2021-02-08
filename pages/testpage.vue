@@ -1,21 +1,15 @@
 <template>
-  <div class="container pt-4 d-flex flex-column">
-    <h3
-      v-anime="{
-        rotate: 360,
-        backgroundColor: ['#2f495e', '#00c58e'],
-        duration: 3000,
-        loop: true,
-      }"
-    >
-      Кубики
-    </h3>
-    <div>Dice 1: {{ dice1 }}</div>
-    <div>Dice 2: {{ dice2 }}</div>
-    <div>----</div>
-    <div>Sum {{ diceSum }}</div>
-    <div class="text-center">
-      <b-btn @click="roll()">Roll Dices</b-btn>
+  <div class="d-flex justify-content-center vh-100 vw-100">
+    <div class="align-self-center">
+      <h3 style="width: 200px">Кубики</h3>
+      <div>Dice 1: {{ dice1 }}</div>
+      <div>Dice 2: {{ dice2 }}</div>
+      <div>----</div>
+      <div>Sum {{ diceSum }}</div>
+      <div class="text-center">
+        <b-btn @click="roll()">Roll Dices</b-btn>
+        <b-btn @click="helloWorld()">helloWorld</b-btn>
+      </div>
     </div>
   </div>
 </template>
@@ -34,6 +28,9 @@ export default {
       return this.dice1 + this.dice2
     },
   },
+  mounted() {
+    this.helloWorld()
+  },
   methods: {
     roll() {
       this.dice1 = this.rollDice()
@@ -42,6 +39,17 @@ export default {
     rollDice() {
       let rand = Math.floor(Math.random() * 6) + 1
       return Math.round(rand)
+    },
+    helloWorld() {
+      const anime = this.$anime
+
+      anime({
+        targets: '.element',
+        translateX: 250,
+        rotate: '1turn',
+        backgroundColor: '#FFF',
+        duration: 800,
+      })
     },
   },
 }
