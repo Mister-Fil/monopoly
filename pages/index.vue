@@ -6,6 +6,7 @@
       <div class="links">
         <b-btn to="/nullpage">Roll Dice</b-btn>
         <b-btn to="/guess">Guess Number</b-btn>
+        <b-btn to="/lesson">Steps</b-btn>
       </div>
     </div>
   </div>

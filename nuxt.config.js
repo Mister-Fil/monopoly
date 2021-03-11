@@ -47,13 +47,19 @@ export default {
     '@nuxtjs/pwa',
   ],
 
+  bootstrapVue: {
+    bootstrapCSS: false,
+    bootstrapVueCSS: false,
+    icons: true,
+  },
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en',
+      lang: 'ru',
     },
   },
 

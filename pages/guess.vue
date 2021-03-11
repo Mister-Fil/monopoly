@@ -64,7 +64,7 @@ export default {
       num: 0,
       turns: 0,
       toastCount: 0,
-      guess: Math.floor(),
+      guess: Math.round(),
     }
   },
   computed: {
@@ -86,13 +86,12 @@ export default {
       this.makeToast('Число обновлено', 'warning')
     },
     newNum() {
-      this.num = Math.floor(Math.random() * 10) + 1
+      this.num = Math.round(Math.random() * 10) + 1
     },
     checkGuess(guess) {
       try {
-        this.guess = Math.floor(guess)
+        this.guess = Math.round(guess)
       } catch (e) {
-        alert('Угадайте число!')
         this.turns++
         return false
       }
